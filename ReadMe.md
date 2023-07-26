@@ -25,15 +25,15 @@ Before using this utility, ensure you have the following:
 
 
 # Usage
-To use the utility, run the following command:
+To use the utility, clone repo --> cd to exif-cmd-utility folder run the following command:
    
 ```bash
-go run main.go -i <input_directory> -o <output_csv_file> -w <optionalparam>
+go run ./ -i <input_directory> -o <output_csv/html_file> -w <optionalparam>
 ```
 
     -i <input_directory>
 
-    -o <output_csv_file>
+    -o <output_csv/html_file>
 
     -n <optionalfield-fileworkers-default-1
 
