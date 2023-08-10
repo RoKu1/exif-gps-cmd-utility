@@ -79,6 +79,8 @@ func main() {
 	dsema <- true
 	go ProcessDir(writer, *inputDirPath)
 	dwg.Wait()
+	close(fsema)
+	close(dsema)
 
 	if err != nil {
 		log.Fatalf("Error walking through the directory: %s", err)
