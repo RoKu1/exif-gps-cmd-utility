@@ -74,6 +74,7 @@ func ProcessDir(writer writers.Writer, dirpath string) error {
 	for _, dirpath := range dirpaths {
 		dsema <- true
 		dwg.Add(1)
+		dirpath := dirpath
 		go ProcessDir(writer, dirpath)
 	}
 	return nil
