@@ -66,6 +66,7 @@ func ProcessDir(writer writers.Writer, dirpath string) error {
 	for _, filepath := range filepaths {
 		fsema <- true
 		fwg.Add(1)
+		filepath := filepath
 		go ProcessFile(writer, filepath, &fwg)
 	}
 	<-dsema
